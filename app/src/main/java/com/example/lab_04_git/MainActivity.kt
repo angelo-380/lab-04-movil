@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -19,10 +20,19 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                Row(modifier = Modifier.padding(innerPadding)) {
-                    Text(text = "Elemento 1 ")
-                    Text(text = "Elemento 2")
+            Lab_04_gitTheme {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // Agregamos la Column para organizar verticalmente
+                    Column(modifier = Modifier.padding(innerPadding)) {
+                        Text(text = "Encabezado de Lista")
+
+                        Row {
+                            Text(text = "Elemento 1 ")
+                            Text(text = "Elemento 2")
+                        }
+
+                        Text(text = "Elemento 3 (debajo del Row)")
+                    }
                 }
             }
         }
