@@ -50,7 +50,7 @@ fun MainContent(modifier: Modifier = Modifier) {
 @Composable
 fun MyColumn(modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
-        Text(text = "Encabezado de Lista")
+        Text(text = "El encabezado de lista") //escrito por angelo-340
         MyRow()
         MyBox()
         Text(text = "Elemento debajo del Box")
