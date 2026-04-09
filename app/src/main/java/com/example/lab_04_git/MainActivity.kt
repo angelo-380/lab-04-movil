@@ -53,7 +53,7 @@ fun MyColumn(modifier: Modifier = Modifier) {
         Text(text = "Encabezado de la lista") //escrito por angeloricasca
         MyRow()
         MyBox()
-        Text(text = "Elemento debajo del Box")
+        Text(text = "Un elemento bajo la box")
     }
 }
 
